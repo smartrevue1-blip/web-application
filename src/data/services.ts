@@ -62,7 +62,7 @@ export const testimonials: Testimonial[] = [
   {
     quote: "Khana bahut accha tha, staff bahut friendly tha aur hygiene bhi ekdum top class thi. Family ke saath zaroor aayenge!",
     name: "Ravi Kumar",
-    role: "Bluemoon Hair Salon customer",
+    role: "The Spice Courtyard customer",
     initials: "RK",
     source: "Google review example",
     language: "हिन्दी",
