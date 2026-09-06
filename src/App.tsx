@@ -1,6 +1,6 @@
 import { Navbar } from './components/Navbar'
 import { Footer } from './components/Footer'
-import { Hero } from './sections/Hero'
+import Hero from './sections/Hero'
 import { Services } from './sections/Services'
 import { ReviewGrowth } from './sections/ReviewGrowth'
 import { HowItWorks } from './sections/HowItWorks'

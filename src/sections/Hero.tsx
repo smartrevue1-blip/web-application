@@ -1,2 +1,149 @@
-import { Button } from '../components/Button'
-export function Hero() { return <section className="hero-section"><div className="container hero-content"><div className="hero-copy"><span className="eyebrow">Marketing that means more</span><h1>Make your <em>good</em> business <span>unmissable.</span></h1><p>Smart Revue helps ambitious businesses build trust, attract attention and grow through the power of great reviews and smarter marketing.</p><div className="hero-actions"><Button href="#contact">Let's grow together</Button><a href="#how-it-works" className="text-link">See how it works <span>↓</span></a></div></div><div className="hero-art" aria-label="Customer review summary"><div className="orbit orbit-one" /><div className="orbit orbit-two" /><div className="review-float"><span className="stars">★★★★★</span><strong>“Absolutely brilliant.”</strong><small>— A happy customer</small></div><div className="hero-blob"><span>★</span></div><div className="growth-float"><strong>+42%</strong><small>growth in enquiries</small></div></div></div></section> }
+import { Button } from "../components/Button";
+
+export default function Hero() {
+  return (
+    <section id="home" className="hero">
+
+      <div className="hero-glow hero-glow-one" />
+      <div className="hero-glow hero-glow-two" />
+
+      <div className="container hero-container">
+
+        <div className="hero-content">
+
+          <div className="hero-badge">
+            <span>✦</span>
+            AI-Powered Business Growth
+          </div>
+
+          <h1>
+            Smart
+            <br />
+            <span>Revue.</span>
+          </h1>
+
+          <p>
+            Real Reviews. Smart Decisions.{" "}
+            <strong>Better Business.</strong>
+          </p>
+
+          <div className="hero-buttons">
+
+            <Button href="#contact">
+              Let's Boost Your Business →
+            </Button>
+
+            <Button
+              href="#reviews"
+              variant="light"
+            >
+              Explore Smart Revue
+            </Button>
+
+          </div>
+
+          <div className="hero-trust">
+
+            <span>✓</span>
+            AI-Assisted Reviews
+
+            <span>✓</span>
+            Marketing
+
+            <span>✓</span>
+            Technology
+
+          </div>
+
+        </div>
+
+        <div className="hero-visual">
+
+          <div className="dashboard-card">
+
+            <div className="dashboard-header">
+
+              <div>
+
+                <small>
+                  AI-POWERED REVIEWS
+                </small>
+
+                <h3>
+                  Business Growth
+                </h3>
+
+              </div>
+
+              <span className="growth-pill">
+                ↗ 32.8%
+              </span>
+
+            </div>
+
+            <div className="mini-chart">
+
+              <div className="chart-line">
+
+                <span />
+                <span />
+                <span />
+                <span />
+                <span />
+                <span />
+                <span />
+
+              </div>
+
+            </div>
+
+            <div className="dashboard-stats">
+
+              <div>
+                <strong>4.9★</strong>
+                <span>Rating</span>
+              </div>
+
+              <div>
+                <strong>248</strong>
+                <span>Reviews</span>
+              </div>
+
+              <div>
+                <strong>+42%</strong>
+                <span>Growth</span>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div className="floating-review">
+
+            <div className="google-icon">
+              G
+            </div>
+
+            <div>
+              <strong>
+                New 5★ Review
+              </strong>
+
+              <span>
+                AI-assisted
+              </span>
+            </div>
+
+            <div className="small-stars">
+              ★★★★★
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+  );
+}
