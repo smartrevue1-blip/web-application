@@ -1,1 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 140"><defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#5630e8"/><stop offset="1" stop-color="#0879e8"/></linearGradient></defs><g transform="translate(155 4)"><circle cx="55" cy="51" r="40" fill="none" stroke="url(#g)" stroke-width="11"/><path d="M26 77 16 112l31-10" fill="url(#g)"/><path d="m25 49 24 21 58-50-50 62z" fill="url(#g)"/><path d="M7 35 0 32M14 16 3 7M32 7 29-6" stroke="#5d30e8" stroke-width="7" stroke-linecap="round"/></g><text x="16" y="111" font-family="Arial,sans-serif" font-size="40" font-weight="700" fill="#092a5e">Smart</text><text x="142" y="111" font-family="Arial,sans-serif" font-size="40" font-weight="700" fill="url(#g)">Revue</text><path d="M45 125h54M278 125h54" stroke="#092a5e" stroke-width="2"/><text x="110" y="131" font-family="Arial,sans-serif" font-size="13" letter-spacing="2" fill="#24374d">powered by Sieka Software</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 104" role="img" aria-labelledby="title desc">
+  <title id="title">Smart Revue</title>
+  <desc id="desc">Smart Revue powered by Sieka Software</desc>
+  <defs>
+    <linearGradient id="logo-gradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5a2ee8"/>
+      <stop offset="1" stop-color="#0879e8"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(8 8)">
+    <circle cx="42" cy="40" r="31" fill="none" stroke="url(#logo-gradient)" stroke-width="9"/>
+    <path d="M20 62 13 88l24-9" fill="url(#logo-gradient)"/>
+    <path d="m20 40 18 16 43-38-37 47z" fill="url(#logo-gradient)"/>
+    <path d="M4 27 0 25M11 12 3 6M27 6 25-2" stroke="#5a2ee8" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <text x="102" y="55" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#092a5e">Smart</text>
+  <text x="247" y="55" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="url(#logo-gradient)">Revue</text>
+  <path d="M104 72h58M357 72h58" stroke="#092a5e" stroke-width="2"/>
+  <text x="173" y="78" font-family="Arial, sans-serif" font-size="12" letter-spacing="1.8" fill="#24374d">powered by Sieka Software</text>
+</svg>

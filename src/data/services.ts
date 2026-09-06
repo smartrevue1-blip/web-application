@@ -68,9 +68,9 @@ export const testimonials: Testimonial[] = [
     language: "हिन्दी",
   },
   {
-    quote: "Smart Revue makes feedback feel natural. Customers choose a rating, find the right words and share their experience in seconds.",
+    quote: "The team were warm, professional and really listened to what I wanted. I left feeling confident and will absolutely come back.",
     name: "Amelia Brown",
-    role: "Owner, Bloom & Co.",
+    role: "Bluemoon Hair Salon customer",
     initials: "AB",
     source: "Customer feedback example",
   },

@@ -19,7 +19,7 @@ export default function Hero() {
           <h1>
             Smart
             <br />
-            <span>Revue.</span>
+            <span>Revue</span>
           </h1>
 
           <p>
