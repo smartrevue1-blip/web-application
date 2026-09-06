@@ -1,1 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="18" fill="#092a5e"/><path d="M13 34c8-21 18-21 26 0s18 21 26 0" fill="none" stroke="#18b8df" stroke-width="6"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Smart Revue">
+  <defs>
+    <linearGradient id="favicon-gradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5a2ee8"/>
+      <stop offset="1" stop-color="#0879e8"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#fff"/>
+  <circle cx="31" cy="29" r="21" fill="none" stroke="url(#favicon-gradient)" stroke-width="7"/>
+  <path d="M16 45 12 58l13-5" fill="url(#favicon-gradient)"/>
+  <path d="m17 29 12 11 29-27-25 33z" fill="url(#favicon-gradient)"/>
+  <path d="M8 20 3 18M13 10 7 5M24 7 23 1" stroke="#5a2ee8" stroke-width="4" stroke-linecap="round"/>
+</svg>
