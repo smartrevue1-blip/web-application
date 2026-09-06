@@ -1,0 +1,2 @@
+import type { Testimonial } from '../types'
+export function ReviewCard({ review }: { review: Testimonial }) { return <article className="card review-card"><div className="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“{review.quote}”</blockquote><footer><span className="avatar">{review.initials}</span><span><strong>{review.name}</strong><small>{review.role}</small></span></footer></article> }

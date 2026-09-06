@@ -1,0 +1,2 @@
+import { Button } from '../components/Button'
+export function Contact() { return <section className="section contact-section" id="contact"><div className="container contact-box"><span className="eyebrow">Ready when you are</span><h2>Let's make your good business <em>unmissable.</em></h2><p>Tell us a little about your business and we'll be in touch for a no-pressure chat.</p><Button href="mailto:hello@smartrevue.com">Start a conversation</Button></div></section> }
