@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from 'react'
+import { useEffect, useState, type FormEvent } from 'react'
 import { Button } from '../components/Button'
 
 type Lead = {
@@ -10,7 +10,13 @@ type Lead = {
 
 export function Contact() {
   const [isOpen, setIsOpen] = useState(false)
-  const [submitted, setSubmitted] = useState(false)
+  const [showToast, setShowToast] = useState(false)
+
+  useEffect(() => {
+    if (!showToast) return
+    const timeout = window.setTimeout(() => setShowToast(false), 6000)
+    return () => window.clearTimeout(timeout)
+  }, [showToast])
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -23,13 +29,13 @@ export function Contact() {
     }
     const existing = JSON.parse(localStorage.getItem('smart-revue-contact-leads') ?? '[]') as Lead[]
     localStorage.setItem('smart-revue-contact-leads', JSON.stringify([...existing, { ...lead, createdAt: new Date().toISOString() }]))
-    setSubmitted(true)
+    setIsOpen(false)
+    setShowToast(true)
     event.currentTarget.reset()
   }
 
   function closeModal() {
     setIsOpen(false)
-    setSubmitted(false)
   }
 
   return (
@@ -51,28 +57,23 @@ export function Contact() {
         <div className="modal-backdrop" role="presentation" onMouseDown={(event) => event.target === event.currentTarget && closeModal()}>
           <div className="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
             <button className="modal-close" type="button" aria-label="Close contact form" onClick={closeModal}>×</button>
-            {submitted ? (
-              <div className="modal-success"><span>✓</span><h3>Thanks, we’ll be in touch.</h3><p>Your message has been captured. We’ll connect the database once the collection details are ready.</p><Button onClick={closeModal}>Close</Button></div>
-            ) : (
-              <>
-                <span className="eyebrow">Tell us about you</span>
-                <h3 id="contact-modal-title">Let’s talk about your growth.</h3>
-                <p className="modal-intro">Share your details and a little about what you need. We’ll get back to you shortly.</p>
-                <form onSubmit={handleSubmit}>
-                  <div className="modal-form-row">
-                    <label>Name<input name="name" type="text" placeholder="Your name" required /></label>
-                    <label>Email<input name="email" type="email" placeholder="you@example.com" required /></label>
-                  </div>
-                  <label>Contact number<input name="phone" type="tel" placeholder="+91 98765 43210" required /></label>
-                  <label>Message<textarea name="message" rows={4} placeholder="Tell us about your shop or business..." required /></label>
-                  <Button type="submit">Submit enquiry</Button>
-                </form>
-                <small className="form-note">Your details stay private and are only used to contact you about Smart Revue.</small>
-              </>
-            )}
+            <span className="eyebrow">Tell us about you</span>
+            <h3 id="contact-modal-title">Let’s talk about your growth.</h3>
+            <p className="modal-intro">Share your details and a little about what you need. We’ll get back to you shortly.</p>
+            <form onSubmit={handleSubmit}>
+              <div className="modal-form-row">
+                <label>Name<input name="name" type="text" placeholder="Your name" required /></label>
+                <label>Email<input name="email" type="email" placeholder="you@example.com" required /></label>
+              </div>
+              <label>Contact number<input name="phone" type="tel" placeholder="+91 98765 43210" required /></label>
+              <label>Message<textarea name="message" rows={4} placeholder="Tell us about your shop or business..." required /></label>
+              <Button type="submit">Submit enquiry</Button>
+            </form>
+            <small className="form-note">Your details stay private and are only used to contact you about Smart Revue.</small>
           </div>
         </div>
       )}
+      {showToast && <div className="contact-toast" role="status" aria-live="polite"><span>✓</span><div><strong>Thanks for reaching out!</strong><small>Our team member will contact you soon.</small></div><button type="button" aria-label="Dismiss notification" onClick={() => setShowToast(false)}>×</button></div>}
     </section>
   )
 }
