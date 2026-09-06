@@ -53,21 +53,22 @@ export const services: Service[] = [
 
 export const testimonials: Testimonial[] = [
   {
-    quote: "Smart Revue helped us become the highest-rated business in our area. The difference in new enquiries was immediate.",
-    name: "Sarah Mitchell",
-    role: "Founder, The Kindred Clinic",
-    initials: "SM",
+    quote: "The haircut was exactly what I wanted. The staff were friendly, the salon was hygienic and the whole experience felt so welcoming.",
+    name: "Priya Sharma",
+    role: "Bluemoon Hair Salon customer",
+    initials: "PS",
     source: "Google review example",
   },
   {
-    quote: "Finally, a team that makes marketing feel simple. We have more five-star reviews and more time to focus on our customers.",
-    name: "James Patel",
-    role: "Director, Oak & Stone",
-    initials: "JP",
+    quote: "Khana bahut accha tha, staff bahut friendly tha aur hygiene bhi ekdum top class thi. Family ke saath zaroor aayenge!",
+    name: "Ravi Kumar",
+    role: "Bluemoon Hair Salon customer",
+    initials: "RK",
     source: "Google review example",
+    language: "हिन्दी",
   },
   {
-    quote: "The team listened first, then made it easy for our customers to leave honest feedback. It feels personal, not pushy.",
+    quote: "Smart Revue makes feedback feel natural. Customers choose a rating, find the right words and share their experience in seconds.",
     name: "Amelia Brown",
     role: "Owner, Bloom & Co.",
     initials: "AB",
