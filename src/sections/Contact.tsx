@@ -18,8 +18,13 @@ export function Contact() {
     return () => window.clearTimeout(timeout)
   }, [showToast])
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState('')
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
+    setIsSubmitting(true)
+    setSubmitError('')
     const form = new FormData(event.currentTarget)
     const lead: Lead = {
       name: String(form.get('name') ?? ''),
@@ -27,11 +32,21 @@ export function Contact() {
       phone: String(form.get('phone') ?? ''),
       message: String(form.get('message') ?? ''),
     }
-    const existing = JSON.parse(localStorage.getItem('smart-revue-contact-leads') ?? '[]') as Lead[]
-    localStorage.setItem('smart-revue-contact-leads', JSON.stringify([...existing, { ...lead, createdAt: new Date().toISOString() }]))
-    setIsOpen(false)
-    setShowToast(true)
-    event.currentTarget.reset()
+    try {
+      const response = await fetch('http://localhost:3001/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(lead),
+      })
+      if (!response.ok) throw new Error('Unable to submit enquiry')
+      setIsOpen(false)
+      setShowToast(true)
+      event.currentTarget.reset()
+    } catch {
+      setSubmitError('We could not send your enquiry. Please try again or use one of the contact options below.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   function closeModal() {
@@ -67,7 +82,8 @@ export function Contact() {
               </div>
               <label>Contact number<input name="phone" type="tel" placeholder="+91 98765 43210" required /></label>
               <label>Message<textarea name="message" rows={4} placeholder="Tell us about your shop or business..." required /></label>
-              <Button type="submit">Submit enquiry</Button>
+              {submitError && <p className="form-error" role="alert">{submitError}</p>}
+              <Button type="submit" disabled={isSubmitting}>{isSubmitting ? 'Sending…' : 'Submit enquiry'}</Button>
             </form>
             <small className="form-note">Your details stay private and are only used to contact you about Smart Revue.</small>
           </div>
