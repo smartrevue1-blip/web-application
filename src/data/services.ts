@@ -57,11 +57,20 @@ export const testimonials: Testimonial[] = [
     name: "Sarah Mitchell",
     role: "Founder, The Kindred Clinic",
     initials: "SM",
+    source: "Google review example",
   },
   {
     quote: "Finally, a team that makes marketing feel simple. We have more five-star reviews and more time to focus on our customers.",
     name: "James Patel",
     role: "Director, Oak & Stone",
     initials: "JP",
+    source: "Google review example",
+  },
+  {
+    quote: "The team listened first, then made it easy for our customers to leave honest feedback. It feels personal, not pushy.",
+    name: "Amelia Brown",
+    role: "Owner, Bloom & Co.",
+    initials: "AB",
+    source: "Customer feedback example",
   },
 ];

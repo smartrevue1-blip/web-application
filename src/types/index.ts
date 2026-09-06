@@ -18,4 +18,5 @@ export type Testimonial = {
   name: string;
   role: string;
   initials: string;
+  source: string;
 };

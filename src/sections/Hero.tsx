@@ -34,7 +34,7 @@ export default function Hero() {
             </Button>
 
             <Button
-              href="#reviews"
+              href="#why-reviews"
               variant="light"
             >
               Explore Smart Revue
@@ -65,12 +65,10 @@ export default function Hero() {
 
               <div>
 
-                <small>
-                  AI-POWERED REVIEWS
-                </small>
+                <small>GOOGLE REVIEW GROWTH</small>
 
                 <h3>
-                  Business Growth
+                  Review performance
                 </h3>
 
               </div>
@@ -101,17 +99,17 @@ export default function Hero() {
 
               <div>
                 <strong>4.9★</strong>
-                <span>Rating</span>
+                <span>Google rating</span>
               </div>
 
               <div>
                 <strong>248</strong>
-                <span>Reviews</span>
+                <span>New reviews</span>
               </div>
 
               <div>
                 <strong>+42%</strong>
-                <span>Growth</span>
+                <span>Engagement</span>
               </div>
 
             </div>
